@@ -1,0 +1,87 @@
+@import "../../variable/variable";
+@import "../../mixin/mixin";
+
+.navbar {
+    top: 0;
+    left: 50%;
+    width: 100%;
+    z-index: 9999;
+    position: absolute;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: $color-FDFDFD;
+    border-bottom: 1px solid $color-F3F3F3;
+    transition: all linear 0.3s;
+
+    .navbar-brand {
+        position: relative;
+        font-family: $font-Jost;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 52px;
+        color: $color-24A04A;
+
+        .text-wrapper {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .letter {
+            display: inline-block;
+        }
+    }
+
+    .nav-item {
+        .nav-link {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $color-9B9B9B;
+            transition: all linear 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0.5;
+
+            &::after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background: $color-24A04A;
+                position: absolute;
+                top: 0;
+                left: -10%;
+                z-index: -1;
+                transition: all linear 0.3s;
+            }
+
+            &:hover {
+                color: $color-1F1E1E;
+                opacity: 1;
+
+                &::after {
+                    left: 95%;
+                }
+            }
+        }
+
+        .nav-link.active {
+            color: $color-1F1E1E;
+            opacity: 1;
+
+            &::after {
+                left: 95%;
+            }
+        }
+    }
+}
+
+.navbar.stiky {
+    position: fixed;
+    background: $color-FDFDFD;
+    box-shadow: 0px 5px 40px rgb(31 30 30 / 10%);
+}

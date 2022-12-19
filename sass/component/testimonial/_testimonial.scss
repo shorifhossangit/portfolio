@@ -1,0 +1,346 @@
+@import "../../variable/variable";
+@import "../../mixin/mixin";
+
+#testimonial {
+    padding-bottom: 100px;
+
+    .testimonial-heading {
+        text-align: center;
+        padding-bottom: 50px;
+
+        h3 {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: $color-24A04A;
+            padding-left: 50px;
+            position: relative;
+
+            &::after {
+                content: "";
+                padding: 4px;
+                border: 2px solid $color-24A04A;
+                position: absolute;
+                border-radius: 50%;
+                animation: test-shape 2s linear infinite;
+            }
+
+            @keyframes test-shape {
+                0% {
+                    top: -3px;
+                    left: 279px;
+                }
+
+                25% {
+                    top: -3px;
+                    left: 294px;
+                }
+
+                50% {
+                    top: 13px;
+                    left: 294px;
+                }
+
+                75% {
+                    top: 13px;
+                    left: 279px;
+                }
+
+                100% {
+                    top: -3px;
+                    left: 279px;
+                }
+            }
+
+            &::before {
+                content: "";
+                padding: 4px;
+                border: 2px solid $color-24A04A;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.7;
+                animation: test-shape-1 2s linear infinite;
+            }
+
+            @keyframes test-shape-1 {
+                0% {
+                    top: -3px;
+                    left: 294px;
+                }
+
+                25% {
+                    top: 13px;
+                    left: 294px;
+                }
+
+                50% {
+                    top: 13px;
+                    left: 279px;
+                }
+
+                75% {
+                    top: -3px;
+                    left: 279px;
+                }
+
+                100% {
+                    top: -3px;
+                    left: 294px;
+                }
+            }
+
+            span {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    padding: 4px;
+                    border: 2px solid $color-24A04A;
+                    position: absolute;
+                    top: 12px;
+                    left: -52px;
+                    border-radius: 50%;
+                    opacity: 0.5;
+                    animation: clrshape-2 2s linear infinite;
+                }
+
+                &::before {
+                    content: "";
+                    padding: 4px;
+                    border: 2px solid $color-24A04A;
+                    position: absolute;
+                    top: 12px;
+                    left: -38px;
+                    border-radius: 50%;
+                    opacity: 0.3;
+                    animation: clrshape-3 2s linear infinite;
+                }
+            }
+        }
+
+        h2 {
+            font-family: $font-Jost;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 60px;
+            line-height: 85px;
+            color: $color-1F1E1E;
+            text-transform: capitalize;
+        }
+    }
+
+    .testimonial-img {
+        position: relative;
+
+        .img {
+            width: 480px;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 5px;
+
+            img {
+                margin-top: -80px;
+                transform: scale(.9);
+            }
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            background: $color-FDFDFD;
+            box-shadow: 0px 5px 40px rgb(31 30 30 / 10%);
+            padding: 30px 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5px 0 0 0;
+
+            h3 {
+                font-family: $font-Jost;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 64px;
+                line-height: 24px;
+                color: $color-ff3f1d;
+                padding-bottom: 20px;
+            }
+
+            h5 {
+                font-family: $font-Montserrat;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $color-5F5F5F;
+                text-transform: capitalize;
+                text-align: center;
+
+                span {
+                    display: block;
+                    font-weight: 700;
+                    color: $color-1F1E1E;
+                    margin-top: -5px;
+                }
+            }
+
+        }
+    }
+
+    .testimonial-info {
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: "99";
+            font-family: $font-Jost;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            color: $color-1F1E1E;
+            text-transform: capitalize;
+            position: absolute;
+            top: 40%;
+            z-index: -2;
+            opacity: 0.03;
+            animation: shape-test 20s linear infinite;
+        }
+
+        @keyframes shape-test {
+            0% {
+                left: 70%;
+            }
+
+            50% {
+                left: 50%;
+            }
+
+            100% {
+                left: 70%;
+            }
+        }
+
+        &::before {
+            content: "99";
+            font-family: $font-Jost;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            color: $color-1F1E1E;
+            text-transform: capitalize;
+            position: absolute;
+            top: 25%;
+            z-index: -2;
+            opacity: 0.03;
+            transform: rotate(180deg);
+            animation: shape-test-2 20s linear infinite;
+        }
+
+        @keyframes shape-test-2 {
+            0% {
+                left: 0%;
+            }
+
+            50% {
+                left: 20%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        h2 {
+            font-family: $font-Jost;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 85px;
+            color: $color-1F1E1E;
+            text-transform: capitalize;
+        }
+
+        h4 {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: $color-5F5F5F;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: $color-1F1E1E;
+            text-transform: capitalize;
+            margin-top: -10px;
+            padding-bottom: 30px;
+        }
+
+        p {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $color-5F5F5F;
+            padding-bottom: 50px;
+        }
+
+        h5 {
+            font-family: $font-Jost;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            padding-bottom: 50px;
+            color: $color-5F5F5F;
+            opacity: 0.4;
+            position: relative;
+        }
+
+        h6 {
+            font-family: $font-Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 36px;
+            text-transform: capitalize;
+            color: $color-5F5F5F;
+            position: relative;
+            background: $color-FDFDFD;
+            padding: 0 100px;
+            display: inline-block;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: $color-24A04A;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                z-index: -1;
+                opacity: 0.5;
+            }
+        }
+
+        .icon {
+            span {
+                svg {
+                    color: $color-ff3f1d;
+                }
+            }
+        }
+    }
+}
